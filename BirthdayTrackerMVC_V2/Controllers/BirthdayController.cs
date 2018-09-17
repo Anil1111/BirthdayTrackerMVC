@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BirthdayTracker.Contracts;
 using BirthdayTrackerMVC_V2.Models;
+using BirthdayTracker.DataAccess.Implementations;
 
 namespace BirthdayTrackerMVC_V2.Controllers
 {
@@ -31,9 +33,16 @@ namespace BirthdayTrackerMVC_V2.Controllers
         [HttpPost]
         public ActionResult Create(BirthdayViewModel birthdayInput)
         {
+            BirthdayTrackerDataAccess _birthdayTrackerDataAccess = new BirthdayTrackerDataAccess();
+
             try
             {
-                // TODO: Add insert logic here
+                var birthday = new Birthday();
+                birthday.FirstName = birthdayInput.FirstName;
+                birthday.LastName = birthdayInput.LastName;
+                birthday.ConvertedDateTime = new DateTime(birthdayInput.Birthyear, birthdayInput.BirthMonth, birthdayInput.Birthday);
+
+                _birthdayTrackerDataAccess.SaveBirthday(birthday);
 
                 return RedirectToAction("Create");
             }

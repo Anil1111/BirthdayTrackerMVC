@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BirthdayTracker.Contracts
 {
-    public class Class1
+    public static class CBirthdayConstants
     {
+        public const string ValidFirstOrLastNameRegexStr = "^[a-zA-Z0-9 ]*$";
     }
 }

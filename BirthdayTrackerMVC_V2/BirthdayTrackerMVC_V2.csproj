@@ -281,6 +281,16 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BirthdayTracker.Contracts\BirthdayTracker.Contracts.csproj">
+      <Project>{4a2dc2d4-3c2b-4159-a722-fb3e668af01e}</Project>
+      <Name>BirthdayTracker.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BirthdayTracker.DataAccess\BirthdayTracker.DataAccess.csproj">
+      <Project>{1b8b93f3-54ee-4f86-a4be-3ac6c9309b4c}</Project>
+      <Name>BirthdayTracker.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

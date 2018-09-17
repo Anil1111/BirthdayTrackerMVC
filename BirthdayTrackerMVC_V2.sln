@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdayTrackerMVC_V2", "Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdayTracker.Contracts", "BirthdayTracker.Contracts\BirthdayTracker.Contracts.csproj", "{4A2DC2D4-3C2B-4159-A722-FB3E668AF01E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdayTracker.DataAccess", "BirthdayTracker.DataAccess\BirthdayTracker.DataAccess.csproj", "{1B8B93F3-54EE-4F86-A4BE-3AC6C9309B4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4A2DC2D4-3C2B-4159-A722-FB3E668AF01E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A2DC2D4-3C2B-4159-A722-FB3E668AF01E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A2DC2D4-3C2B-4159-A722-FB3E668AF01E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B8B93F3-54EE-4F86-A4BE-3AC6C9309B4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B8B93F3-54EE-4F86-A4BE-3AC6C9309B4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B8B93F3-54EE-4F86-A4BE-3AC6C9309B4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B8B93F3-54EE-4F86-A4BE-3AC6C9309B4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

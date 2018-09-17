@@ -9,8 +9,8 @@ namespace BirthdayTrackerMVC_V2.Models
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Birthday { get; set; }
-        public string BirthMonth { get; set; }
-        public string Birthyear { get; set; }
+        public int Birthday { get; set; }
+        public int BirthMonth { get; set; }
+        public int Birthyear { get; set; }
     }
 }
