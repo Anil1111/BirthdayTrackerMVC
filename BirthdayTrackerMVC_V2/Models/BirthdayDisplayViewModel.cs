@@ -11,5 +11,8 @@ namespace BirthdayTrackerMVC_V2.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime Birthday { get; set; }
+        public int BirthdayId { get; set; }
+
+
     }
 }

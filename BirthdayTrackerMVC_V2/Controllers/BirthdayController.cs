@@ -22,9 +22,11 @@ namespace BirthdayTrackerMVC_V2.Controllers
             foreach (var b in birthdayList)
             {
                 var birthday = new BirthdayDisplayViewModel();
+                birthday.BirthdayId = b.BirthdayId;
                 birthday.FirstName = b.FirstName;
                 birthday.LastName = b.LastName;
                 birthday.Birthday = b.ConvertedDateTime;
+
 
                 mappedBirthdayList.Add(birthday);
 
@@ -93,7 +95,11 @@ namespace BirthdayTrackerMVC_V2.Controllers
         // GET: Birthday/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            BirthdayTrackerDataAccess _birthdayTrackerDataAccess = new BirthdayTrackerDataAccess();
+
+            _birthdayTrackerDataAccess.DeleteBirthday(id);
+
+            return RedirectToAction("Index");
         }
 
         // POST: Birthday/Delete/5

@@ -12,6 +12,21 @@ namespace BirthdayTracker.DataAccess.Implementations.Repositories
 {
     public class BirthdayTrackerRespository : IBirthdayTrackerRepository
     {
+        public void DeleteBirthday(int id)
+        {
+            using (MySqlConnection conn = new MySqlConnection("server = localhost; user id = root;" +
+                                                              "password = MikeSierra21!!; database = birthday_tracker"))
+            {
+                conn.Open();
+
+                MySqlCommand command = new MySqlCommand("DELETE FROM `birthday_tracker`.`birthdays` WHERE id = @Id", conn);
+                command.Parameters.Add(new MySqlParameter("Id", id));
+
+                command.ExecuteNonQuery();
+
+            }
+        }
+
         public List<Birthday> GetSavedBirthdays()
         {
             using (MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;password = MikeSierra21!!;database=birthday_tracker"))
@@ -28,9 +43,11 @@ namespace BirthdayTracker.DataAccess.Implementations.Repositories
                     while (reader.Read())
                     {
                         Birthday birthday = new Birthday();
+                        birthday.BirthdayId = reader.GetInt32(0);
                         birthday.FirstName = reader.GetString(1);
                         birthday.LastName = reader.GetString(2);
                         birthday.ConvertedDateTime = reader.GetDateTime(3);
+                        
 
                         birthdayList.Add(birthday);
 

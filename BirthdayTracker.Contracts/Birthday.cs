@@ -50,6 +50,8 @@ namespace BirthdayTracker.Contracts
             get; set;
         }
 
+        public int BirthdayId { get; set; }
+
 
     }
 }

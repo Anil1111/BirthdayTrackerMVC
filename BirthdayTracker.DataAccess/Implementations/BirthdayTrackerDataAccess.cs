@@ -30,5 +30,10 @@ namespace BirthdayTracker.DataAccess.Implementations
             _birthdayTrackerRepository.SaveBrithday(birthday);
         }
 
+        public void DeleteBirthday(int id)
+        {
+            _birthdayTrackerRepository.DeleteBirthday(id);
+        }
+
     }
 }
