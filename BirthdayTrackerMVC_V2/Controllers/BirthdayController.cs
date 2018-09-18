@@ -14,7 +14,23 @@ namespace BirthdayTrackerMVC_V2.Controllers
         // GET: Birthday
         public ActionResult Index()
         {
-            return View();
+            BirthdayTrackerDataAccess _birthdayTrackerDataAccess = new BirthdayTrackerDataAccess();
+
+            var birthdayList = _birthdayTrackerDataAccess.GetSavedBirthdays();
+            var mappedBirthdayList = new List<BirthdayDisplayViewModel>();
+
+            foreach (var b in birthdayList)
+            {
+                var birthday = new BirthdayDisplayViewModel();
+                birthday.FirstName = b.FirstName;
+                birthday.LastName = b.LastName;
+                birthday.Birthday = b.ConvertedDateTime;
+
+                mappedBirthdayList.Add(birthday);
+
+            }
+
+            return View(mappedBirthdayList);
         }
 
         //GET: Birthday/Details/5
@@ -31,7 +47,7 @@ namespace BirthdayTrackerMVC_V2.Controllers
 
         // POST: Birthday/Create
         [HttpPost]
-        public ActionResult Create(BirthdayViewModel birthdayInput)
+        public ActionResult Create(BirthdayInputViewModel birthdayInput)
         {
             BirthdayTrackerDataAccess _birthdayTrackerDataAccess = new BirthdayTrackerDataAccess();
 
@@ -44,7 +60,7 @@ namespace BirthdayTrackerMVC_V2.Controllers
 
                 _birthdayTrackerDataAccess.SaveBirthday(birthday);
 
-                return RedirectToAction("Create");
+                return RedirectToAction("Index");
             }
             catch
             {
