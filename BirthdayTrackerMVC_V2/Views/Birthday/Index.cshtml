@@ -2,9 +2,10 @@
 
 @{
     ViewBag.Title = "Index";
+    var toasterMessage =  TempData["Message"]?.ToString();
 }
 
-<h2>Index</h2>
+<h2>Birthdays</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -23,23 +24,34 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Birthday)
-        </td>
-        <td>
-            @*@Html.ActionLink("Add a Birthday", "Create", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
-            @Html.ActionLink("Delete", "Delete", new { id = item.BirthdayId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Birthday)
+            </td>
+            <td>
+                @*@Html.ActionLink("Add a Birthday", "Create", new { /* id=item.PrimaryKey */ }) |*@
+                @Html.ActionLink("Edit", "Edit", new { id=item.BirthdayId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BirthdayId })
+            </td>
+        </tr>
+    }
+
 
 </table>
+
+
+@if (toasterMessage != null) {
+<div>
+    <script>
+        toastr.options.positionClass = 'toast-bottom-right';
+        toastr.success("@toasterMessage");
+    </script>
+</div>
+}

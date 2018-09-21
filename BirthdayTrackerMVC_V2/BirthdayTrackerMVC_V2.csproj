@@ -280,6 +280,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Birthday\Create.cshtml" />
     <Content Include="Views\Birthday\Index.cshtml" />
+    <Content Include="Views\Birthday\_toasterSuccess.cshtml" />
+    <Content Include="Views\Birthday\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

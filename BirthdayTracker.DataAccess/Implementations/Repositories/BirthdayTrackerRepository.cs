@@ -27,7 +27,7 @@ namespace BirthdayTracker.DataAccess.Implementations.Repositories
             }
         }
 
-        public List<Birthday> GetSavedBirthdays()
+        public List<Birthday> GetAllSavedBirthdays()
         {
             using (MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;password = MikeSierra21!!;database=birthday_tracker"))
             {
@@ -55,6 +55,35 @@ namespace BirthdayTracker.DataAccess.Implementations.Repositories
                 }
 
                 return birthdayList;
+
+            }
+        }
+
+        public Birthday GetSingleSavedBirthday(int id)
+        {
+            using (MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;password = MikeSierra21!!;database=birthday_tracker"))
+            {
+                var birthday = new Birthday();
+
+                conn.Open();
+
+                MySqlCommand command = new MySqlCommand("SELECT * FROM birthday_tracker.birthdays WHERE id = @id", conn);
+                command.Parameters.Add(new MySqlParameter("id", id));
+                MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        birthday.BirthdayId = reader.GetInt32(0);
+                        birthday.FirstName = reader.GetString(1);
+                        birthday.LastName = reader.GetString(2);
+                        birthday.ConvertedDateTime = reader.GetDateTime(3);
+
+                    }
+                }
+
+                return birthday;
 
             }
         }

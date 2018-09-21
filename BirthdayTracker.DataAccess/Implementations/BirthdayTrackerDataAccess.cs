@@ -22,7 +22,12 @@ namespace BirthdayTracker.DataAccess.Implementations
 
         public List<Birthday> GetSavedBirthdays()
         {
-            return _birthdayTrackerRepository.GetSavedBirthdays();
+            return _birthdayTrackerRepository.GetAllSavedBirthdays();
+        }
+
+        public Birthday GetSingleSavedBirthday(int id)
+        {
+            return _birthdayTrackerRepository.GetSingleSavedBirthday(id);
         }
 
         public void SaveBirthday(Birthday birthday)

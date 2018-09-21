@@ -23,9 +23,18 @@ namespace BirthdayTrackerMVC_V2
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+
+            bundles.Add(new ScriptBundle("~/bundles/toastr")
+
+                .Include("~/Scripts/toastr.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/content/toastr")
+
+                .Include("~/Content/toastr.css"));
         }
     }
 }

@@ -11,7 +11,9 @@ namespace BirthdayTracker.DataAccess.Contracts
     {
         void SaveBrithday(Birthday birthday);
 
-        List<Birthday> GetSavedBirthdays();
+        List<Birthday> GetAllSavedBirthdays();
+
+        Birthday GetSingleSavedBirthday(int id);
 
         void DeleteBirthday(int id);
     }
