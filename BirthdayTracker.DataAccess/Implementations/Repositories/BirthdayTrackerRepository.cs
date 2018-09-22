@@ -104,5 +104,23 @@ namespace BirthdayTracker.DataAccess.Implementations.Repositories
 
             }
         }
+
+        public void UpdateBirthday(Birthday birthday, int id)
+        {
+            using (MySqlConnection conn = new MySqlConnection("server = localhost; user id = root;" +
+                                         "password = MikeSierra21!!; database = birthday_tracker"))
+            {
+                conn.Open();
+
+                MySqlCommand command = new MySqlCommand("UPDATE `birthday_tracker`.`birthdays` SET FirstName = @FirstName, LastName = @LastName, Birthday = @Birthday WHERE Id = @Id", conn);
+                command.Parameters.Add(new MySqlParameter("Id", id));
+                command.Parameters.Add(new MySqlParameter("FirstName", birthday.FirstName));
+                command.Parameters.Add(new MySqlParameter("LastName", birthday.LastName));
+                command.Parameters.Add(new MySqlParameter("Birthday", birthday.ConvertedDateTime));
+
+                command.ExecuteNonQuery();
+
+            }
+        }
     }
 }

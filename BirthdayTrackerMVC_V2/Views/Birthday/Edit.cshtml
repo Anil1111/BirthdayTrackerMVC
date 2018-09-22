@@ -2,11 +2,13 @@
 
 @{
     ViewBag.Title = "Edit";
+    var routeValues = new RouteValueDictionary();
+    routeValues.Add("Id", Model.BirthdayId);
 }
 
 <h2>Edit</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm(routeValues))
 {
     @Html.AntiForgeryToken()
     

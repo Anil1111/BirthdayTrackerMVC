@@ -35,6 +35,11 @@ namespace BirthdayTracker.DataAccess.Implementations
             _birthdayTrackerRepository.SaveBrithday(birthday);
         }
 
+        public void UpdateBirthday(Birthday birthday, int id)
+        {
+            _birthdayTrackerRepository.UpdateBirthday(birthday, id);
+        }
+
         public void DeleteBirthday(int id)
         {
             _birthdayTrackerRepository.DeleteBirthday(id);

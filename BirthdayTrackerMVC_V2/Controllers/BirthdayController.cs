@@ -94,11 +94,21 @@ namespace BirthdayTrackerMVC_V2.Controllers
 
         // POST: Birthday/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, BirthdayInputViewModel birthdayInput)
         {
+
+            BirthdayTrackerDataAccess _birthdayTrackerDataAccess = new BirthdayTrackerDataAccess();
+
             try
-            {
-                // TODO: Add update logic here
+            {  
+                var mappedBirthday = new Birthday();
+                mappedBirthday.FirstName = birthdayInput.FirstName;
+                mappedBirthday.LastName = birthdayInput.LastName;
+                mappedBirthday.ConvertedDateTime = new DateTime(birthdayInput.BirthYear, birthdayInput.BirthMonth, birthdayInput.BirthDay);
+
+                _birthdayTrackerDataAccess.UpdateBirthday(mappedBirthday, id);
+
+                TempData["Message"] = "Birthday Updated!!!";
 
                 return RedirectToAction("Index");
             }
@@ -114,6 +124,8 @@ namespace BirthdayTrackerMVC_V2.Controllers
             BirthdayTrackerDataAccess _birthdayTrackerDataAccess = new BirthdayTrackerDataAccess();
 
             _birthdayTrackerDataAccess.DeleteBirthday(id);
+
+            TempData["Message"] = "Birthday Deleted!!!";
 
             return RedirectToAction("Index");
         }
