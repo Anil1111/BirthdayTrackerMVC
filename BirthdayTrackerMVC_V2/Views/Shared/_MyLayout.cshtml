@@ -22,8 +22,6 @@
 
     -->
 
-    
-
     <!-- stylesheet css -->
     <link rel="stylesheet" href=@Url.Content("/Content/BootstrapTheme/css/bootstrap.min.css")>
     <link rel="stylesheet" href=@Url.Content("/Content/BootstrapTheme/css/font-awesome.min.css")>
@@ -50,13 +48,13 @@
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                 </button>
-                <a href="#home" class="navbar-brand smoothScroll">Minimax</a>
+                <a href="#home" class="navbar-brand smoothScroll">BirthdayTrackerMVC</a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/Home" class="smoothScroll">HOME</a></li>
-                    <li><a href="/Birthday" class="smoothScroll">Add Birthdays</a></li>
-                    
+                    <li><a href="/Birthday" class="smoothScroll">Manage Birthdays</a></li>
+
                 </ul>
             </div>
         </div>
@@ -67,7 +65,7 @@
     <br />
 
     <div class="container body-content">
-    @RenderBody()
+        @RenderBody()
     </div>
 
     <!-- divider section -->
@@ -96,7 +94,7 @@
                     <ul class="social-icons">
                         <li><a href="#" class="fa fa-facebook"></a></li>
                         <li><a href="#" class="fa fa-twitter"></a></li>
-                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                        <li><a href="www.google.com" class="fa fa-google-plus"></a></li>
                         <li><a href="#" class="fa fa-dribbble"></a></li>
                     </ul>
                 </div>
@@ -131,6 +129,10 @@
     <!-- scrolltop section -->
     <a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
 
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/toastr")
+    @Scripts.Render("~/bundles/bootstrap")
 
     <!-- javascript js -->
     <script src=@Url.Content("/Content/BootstrapTheme/js/jquery.js")></script>
@@ -142,10 +144,9 @@
     <script src=@Url.Content("/Content/BootstrapTheme/js/imagesloaded.min.js")></script>
     <script src=@Url.Content("/Content/BootstrapTheme/js/custom.js")></script>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/toastr")
+    
+
+    
     @RenderSection("scripts", required: false)
 
 </body>
