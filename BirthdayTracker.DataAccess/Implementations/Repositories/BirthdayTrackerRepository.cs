@@ -14,8 +14,7 @@ namespace BirthdayTracker.DataAccess.Implementations.Repositories
     {
         public void DeleteBirthday(int id)
         {
-            using (MySqlConnection conn = new MySqlConnection("server = localhost; user id = root;" +
-                                                              "password = MikeSierra21!!; database = birthday_tracker"))
+            using (MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;password = MikeSierra21!!;database=birthday_tracker"))
             {
                 conn.Open();
 
