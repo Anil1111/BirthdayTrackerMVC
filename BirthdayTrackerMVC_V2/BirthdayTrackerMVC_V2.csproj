@@ -211,9 +211,48 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\BootstrapTheme\css\bootstrap.min.css" />
+    <Content Include="Content\BootstrapTheme\css\font-awesome.min.css" />
+    <Content Include="Content\BootstrapTheme\css\nivo-lightbox.css" />
+    <Content Include="Content\BootstrapTheme\css\nivo_themes\default\close%402x.png" />
+    <Content Include="Content\BootstrapTheme\css\nivo_themes\default\close.png" />
+    <Content Include="Content\BootstrapTheme\css\nivo_themes\default\default.css" />
+    <Content Include="Content\BootstrapTheme\css\nivo_themes\default\loading%402x.gif" />
+    <Content Include="Content\BootstrapTheme\css\nivo_themes\default\loading.gif" />
+    <Content Include="Content\BootstrapTheme\css\nivo_themes\default\next%402x.png" />
+    <Content Include="Content\BootstrapTheme\css\nivo_themes\default\next.png" />
+    <Content Include="Content\BootstrapTheme\css\nivo_themes\default\prev%402x.png" />
+    <Content Include="Content\BootstrapTheme\css\nivo_themes\default\prev.png" />
+    <Content Include="Content\BootstrapTheme\css\style.css" />
+    <Content Include="Content\BootstrapTheme\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\BootstrapTheme\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\BootstrapTheme\fonts\LANENAR_-webfont.svg" />
+    <Content Include="Content\BootstrapTheme\images\about-img.jpg" />
+    <Content Include="Content\BootstrapTheme\images\about.jpg" />
+    <Content Include="Content\BootstrapTheme\images\home-bg.jpg" />
+    <Content Include="Content\BootstrapTheme\images\portfolio-img1.jpg" />
+    <Content Include="Content\BootstrapTheme\images\portfolio-img2.jpg" />
+    <Content Include="Content\BootstrapTheme\images\portfolio-img3.jpg" />
+    <Content Include="Content\BootstrapTheme\images\portfolio-img4.jpg" />
+    <Content Include="Content\BootstrapTheme\images\portfolio-img5.jpg" />
+    <Content Include="Content\BootstrapTheme\images\portfolio-img6.jpg" />
+    <Content Include="Content\BootstrapTheme\images\portfolio-img7.jpg" />
+    <Content Include="Content\BootstrapTheme\images\portfolio-img8.jpg" />
+    <Content Include="Content\BootstrapTheme\images\team1.jpg" />
+    <Content Include="Content\BootstrapTheme\images\team2.jpg" />
+    <Content Include="Content\BootstrapTheme\images\team3.jpg" />
+    <Content Include="Content\BootstrapTheme\images\team4.jpg" />
+    <Content Include="Content\BootstrapTheme\index.html" />
+    <Content Include="Content\BootstrapTheme\js\bootstrap.min.js" />
+    <Content Include="Content\BootstrapTheme\js\custom.js" />
+    <Content Include="Content\BootstrapTheme\js\imagesloaded.min.js" />
+    <Content Include="Content\BootstrapTheme\js\isotope.js" />
+    <Content Include="Content\BootstrapTheme\js\jquery.js" />
+    <Content Include="Content\BootstrapTheme\js\jquery.nav.js" />
+    <Content Include="Content\BootstrapTheme\js\nivo-lightbox.min.js" />
+    <Content Include="Content\BootstrapTheme\js\smoothscroll.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\BootstrapTheme\index.html" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
     <Content Include="favicon.ico" />
@@ -240,6 +279,22 @@
     <Content Include="fonts\LANENAR_-webfont.eot" />
     <Content Include="fonts\LANENAR_-webfont.ttf" />
     <Content Include="fonts\LANENAR_-webfont.woff" />
+    <Content Include="Content\BootstrapTheme\css\.DS_Store" />
+    <Content Include="Content\BootstrapTheme\fonts\.DS_Store" />
+    <Content Include="Content\BootstrapTheme\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\BootstrapTheme\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\BootstrapTheme\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\BootstrapTheme\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\BootstrapTheme\fonts\FontAwesome.otf" />
+    <Content Include="Content\BootstrapTheme\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\BootstrapTheme\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\BootstrapTheme\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\BootstrapTheme\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\BootstrapTheme\fonts\Lane-Narrow.ttf" />
+    <Content Include="Content\BootstrapTheme\fonts\LANENAR_-webfont.eot" />
+    <Content Include="Content\BootstrapTheme\fonts\LANENAR_-webfont.ttf" />
+    <Content Include="Content\BootstrapTheme\fonts\LANENAR_-webfont.woff" />
+    <Content Include="Content\BootstrapTheme\js\.DS_Store" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -299,10 +354,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\BootstrapTheme\css\" />
-    <Folder Include="Content\BootstrapTheme\fonts\" />
-    <Folder Include="Content\BootstrapTheme\images\" />
-    <Folder Include="Content\BootstrapTheme\js\" />
     <Folder Include="Content\Theme\" />
   </ItemGroup>
   <ItemGroup>

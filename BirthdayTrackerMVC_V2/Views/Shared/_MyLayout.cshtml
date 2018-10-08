@@ -21,19 +21,26 @@
     http://www.tooplate.com/view/2080-minimax
 
     -->
+
+    
+
     <!-- stylesheet css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/nivo-lightbox.css">
-    <link rel="stylesheet" href="css/nivo_themes/default/default.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href=@Url.Content("/Content/BootstrapTheme/css/bootstrap.min.css")>
+    <link rel="stylesheet" href=@Url.Content("/Content/BootstrapTheme/css/font-awesome.min.css")>
+    <link rel="stylesheet" href=@Url.Content("/Content/BootstrapTheme/css/nivo-lightbox.css")>
+    <link rel="stylesheet" href=@Url.Content("/Content/BootstrapTheme/css/nivo_themes/default/default.css")>
+    <link rel="stylesheet" href=@Url.Content("/Content/BootstrapTheme/css/style.css")>
     <!-- google web font css -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Toastr")
+    
 
     <title>_MyLayout</title>
 </head>
 
-<body data-spy="scroll" data-target=".navbar-collapse">
+<body>
     <!-- navigation -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -47,32 +54,21 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#home" class="smoothScroll">HOME</a></li>
-                    <li><a href="#service" class="smoothScroll">SERVICE</a></li>
-                    <li><a href="#about" class="smoothScroll">ABOUT</a></li>
-                    <li><a href="#portfolio" class="smoothScroll">PORTFOLIO</a></li>
-                    <li><a href="#pricing" class="smoothScroll">PRICE</a></li>
-                    <li><a href="#contact" class="smoothScroll">CONTACT</a></li>
+                    <li><a href="/Home" class="smoothScroll">HOME</a></li>
+                    <li><a href="/Birthday" class="smoothScroll">Add Birthdays</a></li>
+                    
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- home section -->
-    <div id="home">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6">
-                    <h2>Welcome to</h2>
-                    <h1>Minimax <strong>Digital Firm</strong></h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
-                    <a href="#service" class="btn btn-default smoothScroll">GET STARTED</a>
-                </div>
-            </div>
-        </div>
+    <br />
+    <br />
+    <br />
+
+    <div class="container body-content">
+    @RenderBody()
     </div>
-
-
 
     <!-- divider section -->
     <div class="container">
@@ -91,9 +87,9 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6">
                     <h2>Our Office</h2>
-                    <p>101 Clean Street, California, CA 10110</p>
-                    <p>Email: <span>hello@company.com</span></p>
-                    <p>Phone: <span>010-020-0340</span></p>
+                    <p>4576 Spanish Oaks Drive</p>
+                    <p>Email: <span>test@birthdaytrackermvc</span></p>
+                    <p>Phone: <span>555-555-5555</span></p>
                 </div>
                 <div class="col-md-6 col-sm-6">
                     <h2>Social Us</h2>
@@ -125,9 +121,7 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <p>
-                        Copyright &copy; 2016 Minimax Digital Firm
-
-                        - Design: <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a>
+                        Copyright &copy; 2018 Birthday Tracker MVC
                     </p>
                 </div>
             </div>
@@ -139,13 +133,20 @@
 
 
     <!-- javascript js -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/nivo-lightbox.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.nav.js"></script>
-    <script src="js/isotope.js"></script>
-    <script src="js/imagesloaded.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src=@Url.Content("/Content/BootstrapTheme/js/jquery.js")></script>
+    <script src=@Url.Content("/Content/BootstrapTheme/js/bootstrap.min.js")></script>
+    <script src=@Url.Content("/Content/BootstrapTheme/js/nivo-lightbox.min.js")></script>
+    <script src=@Url.Content("/Content/BootstrapTheme/js/smoothscroll.js")></script>
+    <script src=@Url.Content("/Content/BootstrapTheme/js/jquery.nav.js")></script>
+    <script src=@Url.Content("/Content/BootstrapTheme/js/isotope.js")></script>
+    <script src=@Url.Content("/Content/BootstrapTheme/js/imagesloaded.min.js")></script>
+    <script src=@Url.Content("/Content/BootstrapTheme/js/custom.js")></script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/toastr")
+    @RenderSection("scripts", required: false)
+
 </body>
 </html>
