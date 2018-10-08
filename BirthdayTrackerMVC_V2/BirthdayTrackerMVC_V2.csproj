@@ -213,10 +213,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\BootstrapTheme\index.html" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\LANENAR_-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
@@ -226,6 +229,17 @@
     </Content>
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="fonts\.DS_Store" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\Lane-Narrow.ttf" />
+    <Content Include="fonts\LANENAR_-webfont.eot" />
+    <Content Include="fonts\LANENAR_-webfont.ttf" />
+    <Content Include="fonts\LANENAR_-webfont.woff" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -281,9 +295,14 @@
     <Content Include="Views\Birthday\Create.cshtml" />
     <Content Include="Views\Birthday\Index.cshtml" />
     <Content Include="Views\Birthday\Edit.cshtml" />
+    <Content Include="Views\Shared\_MyLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\BootstrapTheme\css\" />
+    <Folder Include="Content\BootstrapTheme\fonts\" />
+    <Folder Include="Content\BootstrapTheme\images\" />
+    <Folder Include="Content\BootstrapTheme\js\" />
     <Folder Include="Content\Theme\" />
   </ItemGroup>
   <ItemGroup>
